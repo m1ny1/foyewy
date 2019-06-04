@@ -1,9 +1,4 @@
 /**
- * 功能说明：请求封装类
- * 更新说明：新建
- */
-
-/**
  * 请求执行封装方法
  * @param request 执行axios请求方法返回的promise对象
  * @param successCallback 成功时的回调方法

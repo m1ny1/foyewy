@@ -9,6 +9,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // 初始页面
     {
       path: '/',
       name: 'demo',
