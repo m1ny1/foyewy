@@ -14,6 +14,20 @@ export default new Router({
       path: '/',
       name: 'demo',
       component: () => import(/* webpackChunkName: "demo" */ '../views/demo/Demo.vue')
+    },
+    // 全屏
+    {
+      path: '/fullscreen',
+      component: () => import(/* webpackChunkName: "fullscreen" */ '../views/fullscreen/FullScreen.vue'),
+      name: 'fullscreen'
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import(/* webpackChunkName: "home" */ '../views/home/Home.vue'),
+      children: [
+
+      ]
     }
   ]
 })
