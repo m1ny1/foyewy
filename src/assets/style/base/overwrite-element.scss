@@ -1,0 +1,13 @@
+/**
+ * 功能说明：全局覆盖element ui样式
+ * 创建时间：2018/10/23
+ * 更新说明：新建
+ */
+
+@import "variable";
+
+// 示例
+.el-upload,
+.el-upload-dragger {
+  width: 100% !important;
+}

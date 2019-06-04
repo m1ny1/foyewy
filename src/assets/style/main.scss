@@ -1,0 +1,19 @@
+/**
+ * 功能说明：主scss文件
+ * 创建时间：2018/10/23
+ * 更新说明：新建
+ */
+
+// 引入animate.css动画
+@import "~animate.css";
+// 引入normalize.css
+@import "~normalize.css";
+// 引入sass基础变量
+@import "base/variable";
+// 引入element ui 样式文件
+@import "~element-ui/lib/theme-chalk/index.css";
+// 引入覆盖element ui 默认css样式文件
+@import "./base/overwrite-element";
+// 引入基础通用样式文件
+@import "./base/common";
+
