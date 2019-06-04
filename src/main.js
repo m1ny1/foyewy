@@ -11,16 +11,24 @@ import './assets/style/main.scss'
 import 'babel-polyfill'
 import config from './utils/sync-config'
 import echarts from 'echarts'
+import axios from './api/axios-config'
+import moment from 'moment'
+import request from '@/utils/axios-util'
 
 // 引入echarts主题
 import ThemeBlack from 'rnop-theme/echarts/echarts-theme-black.js'
 import ThemeBlue from 'rnop-theme/echarts/echarts-theme-blue.js'
-// 注册主题
 
+// 注册主题
 echarts.registerTheme('black', ThemeBlack)
 echarts.registerTheme('blue', ThemeBlue)
 Vue.prototype.$echarts = echarts
-
+// 将封装的请求方法挂在到vue组件的原型上
+Vue.prototype.$request = request.exec
+// 将axios挂在到vue组件的原型上
+Vue.prototype.$http = axios
+// 将moment挂在到vue组件的原型上
+Vue.prototype.$moment = moment
 // 将config挂在到window.$web对象
 window.$web = {
   $conf: config
@@ -40,7 +48,6 @@ if (process.env.NODE_ENV === 'development') {
   // require('./mock/')
 }
 
-/* eslint-disable no-new */
 new Vue({
   router,
   store,
